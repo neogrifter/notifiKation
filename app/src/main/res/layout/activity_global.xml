@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_global_margin">
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/notifications_listview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_global_notification_list_length" />
+
+    <Button
+        android:id="@+id/notifications_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="addNewNotification"
+        android:text="@string/button_add_new" />
+
+</LinearLayout>

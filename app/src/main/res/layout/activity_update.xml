@@ -1,0 +1,134 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_update_margin"
+    tools:context="com.redsquirrel.neogrifter.notifikation.UpdateActivity">
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_icon_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:drawableRight="@drawable/ic_clock"
+            android:onClick="onIconRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_icon_smiley"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_smiley"
+            android:onClick="onIconRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_icon_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_alert"
+            android:onClick="onIconRadioButtonClicked"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/notif_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_label"
+        android:inputType="textCapSentences|textShortMessage"
+        android:maxLines="1"
+        android:maxLength="40"
+        />
+
+    <EditText
+        android:id="@+id/notif_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_update_description_size"
+        android:hint="@string/edit_description"
+        android:inputType="textCapSentences|textMultiLine|textLongMessage"
+        android:maxLines="2"
+        android:maxLength="100"
+        />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_chrono_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/edit_chrono_countdown"
+            android:onClick="onChronoRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_chrono_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_chrono_calendar"
+            android:onClick="onChronoRadioButtonClicked"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_update_margin"
+        android:id="@+id/chronoCountdownLayout">
+
+            <EditText
+                android:id="@+id/notif_chrono_value"
+                android:width="@dimen/activity_update_date_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="3"
+                android:layout_weight="1"
+                />
+
+            <Spinner
+                android:id="@+id/notif_chrono_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_update_margin"
+        android:id="@+id/chronoCalendarLayout"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/chrono_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_update_margin"
+            android:gravity="center_horizontal"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_chrono_calendar_date_button"
+            android:onClick="showDatePickerDialog" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_chrono_calendar_time_button"
+            android:onClick="showTimePickerDialog" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_create"
+        android:onClick="updateNotification"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_cancel"
+        android:onClick="cancelUpdate"/>
+
+</LinearLayout>

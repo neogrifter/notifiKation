@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">[notifiKation]</string>
+
+    <!-- TODO faire un fichier anglais et un fichier FR -->
+
+    <string name="action_about">A propos</string>
+
+    <string name="button_add_new">Ajouter</string>
+    <string name="button_create">Valider</string>
+    <string name="button_cancel">Annuler</string>
+    <string name="button_ok">OK</string>
+
+    <string name="about_text">Création et gestion de notifications d\'alerte.</string>
+    <string name="about_version">Version : </string>
+    <string name="about_author">\@NeoGrifteR</string>
+
+    <!-- TODO mettre le numero de version ailleurs ? -->
+    <string name="about_version_number">0.1</string>
+
+    <string name="title_activity_update">Notification</string>
+
+    <string name="edit_label">Label de la notification</string>
+    <string name="edit_description">Description de la notification</string>
+    <string name="edit_chrono_calendar">Calendrier</string>
+    <string name="edit_chrono_countdown">Chronomètre</string>
+
+    <string name="edit_chrono_calendar_date_button">Choix de la date</string>
+    <string name="edit_chrono_calendar_time_button">Choix de l\'heure</string>
+
+    <string name="notif_list_update_button">Modifier</string>
+    <string name="notif_list_remove_button">Supprimer</string>
+
+    <string name="notif_list_remove_ask">Voulez-vous supprimer cette notification ?</string>
+    <string name="notif_list_remove_yes">Oui</string>
+    <string name="notif_list_remove_no">Non</string>
+
+    <string-array name="chrono_types">
+        <item>minutes</item>
+        <item>heures</item>
+        <item>jours</item>
+        <!-- DEBUG ONLY ! -->
+        <!-- item>secondes</item-->
+    </string-array>
+
+</resources>
